@@ -42,4 +42,4 @@ const logWeather = ({
 
 logWeather(todaysWeather);
 
-//export {};
+export {};
