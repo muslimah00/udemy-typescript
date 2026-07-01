@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve"
   },
   "author": "",
   "license": "ISC",
@@ -11,5 +11,12 @@
     "@types/faker": "^5.5.9",
     "@types/google.maps": "^3.51.0",
     "faker": "4.1.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.6.2",
+    "typescript": "^6.0.3",
+    "webpack": "^5.108.3",
+    "webpack-cli": "^7.1.0",
+    "webpack-dev-server": "^5.2.5"
   }
 }
