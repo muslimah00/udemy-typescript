@@ -1,29 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Sorter {
-    collection;
-    constructor(collection) {
-        this.collection = collection;
-    }
-    sort() {
-        const { length } = this.collection;
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < length - i - 1; j++) {
-                // Use "as T" to tell TypeScript "trust me, these are T"
-                const left = this.collection[j];
-                const right = this.collection[j + 1];
-                if (left > right) {
-                    this.collection[j] = right;
-                    this.collection[j + 1] = left;
-                }
-            }
-        }
-    }
-}
-const sorter = new Sorter([10, 3, -5, 0]);
-const sorter2 = new Sorter(['a', 'v', 'b', 'c']);
+import { Sorter } from './Sorter.js';
+import { NumbersCollection } from './NumbersCollection.js';
+const numbersCollection = new NumbersCollection([20, 4, -5, -6]);
+const sorter = new Sorter(numbersCollection);
 sorter.sort();
-sorter2.sort();
-console.log(sorter.collection);
-console.log(sorter2.collection);
-//# sourceMappingURL=index.js.map
+console.log(numbersCollection.data);
