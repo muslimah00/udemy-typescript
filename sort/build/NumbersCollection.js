@@ -1,5 +1,7 @@
-export class NumbersCollection {
+import { Sorter } from './Sorter.js';
+export class NumbersCollection extends Sorter {
     constructor(data) {
+        super();
         this.data = data;
     }
     get length() {

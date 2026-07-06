@@ -1,11 +1,13 @@
+import { Sorter } from './Sorter.js';
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-export class LinkedList {
+export class LinkedList extends Sorter {
     constructor() {
+        super(...arguments);
         this.head = null;
     }
     add(data) {
