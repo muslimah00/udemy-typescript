@@ -1,1 +1,2 @@
-console.log("Hello Worldd!");
+import fs from "node:fs";
+
