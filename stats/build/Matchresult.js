@@ -8,4 +8,3 @@ var MatchResult;
     MatchResult["AwayWin"] = "A";
     MatchResult["Draw"] = "D";
 })(MatchResult || (exports.MatchResult = MatchResult = {}));
-;
