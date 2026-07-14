@@ -1,51 +1,70 @@
 # Web Project Setup
 
-This `web` folder is a small frontend project built with TypeScript and bundled using `esbuild`.
+This folder is a small frontend project built with TypeScript and Vite. It also uses JSON Server to serve the mock database from db.json.
 
 ## Prerequisites
 
-- Node.js installed
-- npm available from the command line
+Make sure these are installed on the other device:
 
-## Install dependencies
+- Node.js 18 or newer
+- npm
 
-Open a terminal in `/Users/oceaanblu/Documents/my-project/udemy-typescript/web` and run:
+## 1. Install dependencies
+
+Open a terminal in this folder and run:
 
 ```bash
 npm install
 ```
 
-## Run the development server
+## 2. Start the mock API
+
+In one terminal, start the JSON server:
+
+```bash
+npm run start:db
+```
+
+This will serve the data from db.json, usually at:
+
+- http://localhost:3000
+
+## 3. Start the frontend
+
+Open a second terminal in the same folder and run:
 
 ```bash
 npm run dev
 ```
 
-Then open the local URL shown in the terminal, typically:
+Vite will print a local URL such as:
 
-- `http://127.0.0.1:8000/`
+- http://localhost:5173/
 
-## Build for production
+Open that address in your browser.
+
+## 4. Build for production
+
+To create a production build:
 
 ```bash
 npm run build
 ```
 
-The bundled output will be written to:
+The output will be generated in the dist folder.
 
-- `dist/bundle.js`
+## 5. Preview the production build
+
+```bash
+npm run preview
+```
 
 ## Notes
 
-- The app entry point is `src/index.ts`.
-- The HTML file is `index.html` and loads `./dist/bundle.js`.
-- If you see a permission error on `node_modules/.bin/esbuild`, run:
-
-```bash
-chmod +x node_modules/.bin/esbuild
-```
-
-- If the install is corrupted, remove `node_modules` and reinstall:
+- The app entry point is src/index.ts.
+- The HTML file is index.html.
+- If the dev server port is busy, Vite will automatically choose another port and show it in the terminal.
+- If dependencies become corrupted, you can reinstall them with:
 
 ```bash
 rm -rf node_modules package-lock.json
