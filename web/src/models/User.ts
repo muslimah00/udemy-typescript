@@ -18,6 +18,7 @@ export class User {
 
   constructor(attrs: UserProps) {
     this.attributes = new Attributes<UserProps>(attrs);
+<<<<<<< HEAD
   }
 
   get on() {
@@ -62,5 +63,7 @@ export class User {
       .catch(() => {
         this.trigger('error');
       });
+=======
+>>>>>>> 5942158a5f6229e30bba0e33649a4fdb815154a1
   }
 }
