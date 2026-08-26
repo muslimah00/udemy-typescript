@@ -1,16 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import { App } from './components/App';
-import { reducers } from './reducers';
+import ReactDOM from "react-dom/client";
+import GuestList from './state/GuestList';
+const el = document.getElementById("root");
 
-const store = createStore(reducers, applyMiddleware(thunk));
+const root = ReactDOM.createRoot(el!);
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.querySelector('#root')
-);
+const App = () => {
+  return (
+    <div>
+      <GuestList />
+    </div>
+  );
+};
+
+root.render(<App />);
