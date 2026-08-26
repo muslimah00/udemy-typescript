@@ -1,15 +1,13 @@
 import ReactDOM from "react-dom/client";
-import GuestList from './state/GuestList';
-const el = document.getElementById("root");
-
-const root = ReactDOM.createRoot(el!);
+import UserSearch from "./refs/UserSearch";
 
 const App = () => {
   return (
     <div>
-      <GuestList />
+      <UserSearch />
     </div>
   );
 };
 
+const root = ReactDOM.createRoot(document.querySelector('#root') as HTMLElement);
 root.render(<App />);
